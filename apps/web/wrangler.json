@@ -1,22 +1,22 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "canvassing-web",
-  "main": "src/worker.ts",
+  "main": "dist/server/index.js",
   "assets": {
     "directory": "./dist/client",
     "binding": "ASSETS"
   },
-  "compatibility_date": "2024-11-20",
+  "compatibility_date": "2024-12-01",
   "compatibility_flags": ["nodejs_compat"],
   "vars": {
     "APP_ENV": "development",
-    "PUBLIC_MARKETING_URL": "https://canvassing-web.workers.dev",
+    "PUBLIC_MARKETING_URL": "http://localhost:4321",
     "MONEY_DEFAULT_CURRENCY": "IDR"
   },
   "r2_buckets": [
     {
       "binding": "PHOTOS",
-      "bucket_name": "canvassing-photos"
+      "bucket_name": "canvassing-photos-dev"
     }
   ],
   "observability": {
@@ -27,7 +27,7 @@
       "name": "canvassing-web-staging",
       "vars": {
         "APP_ENV": "staging",
-        "PUBLIC_MARKETING_URL": "https://canvassing-web-staging.workers.dev",
+        "PUBLIC_MARKETING_URL": "https://canvassing-marketing-staging.pages.dev",
         "MONEY_DEFAULT_CURRENCY": "IDR"
       },
       "r2_buckets": [

@@ -1,0 +1,14 @@
+# Cloudflare Pages configuration for Marketing Site
+# Deploy with: pnpm --filter marketing deploy
+
+name = "canvassing-marketing"
+compatibility_date = "2024-12-01"
+
+# Note: Marketing site uses Cloudflare Pages via Astro adapter
+# Deployment is handled via `astro build && wrangler pages deploy dist`
+
+[env.staging]
+name = "canvassing-marketing-staging"
+
+[env.production]
+name = "canvassing-marketing"
