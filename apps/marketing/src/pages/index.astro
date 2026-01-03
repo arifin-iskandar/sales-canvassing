@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Aplikasi Sales Canvassing">
+  <!-- Hero -->
+  <section class="py-20 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">
+        Kelola Tim Sales Lapangan
+        <span class="text-primary-600">dengan Mudah</span>
+      </h1>
+      <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+        Aplikasi canvassing dan penagihan untuk distributor mikro. Lacak
+        kunjungan, kelola piutang, dan tingkatkan cash collection.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/demo"
+          class="px-8 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-medium"
+        >
+          Minta Demo Gratis
+        </a>
+        <a
+          href="/pricing"
+          class="px-8 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors font-medium"
+        >
+          Lihat Harga
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-20 bg-gray-50 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">Fitur Utama</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow-sm">
+          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Lacak Kunjungan</h3>
+          <p class="text-gray-600">
+            GPS check-in dengan foto bukti. Validasi geofence otomatis untuk
+            mencegah kunjungan palsu.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm">
+          <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Kelola Piutang</h3>
+          <p class="text-gray-600">
+            Catat invoice dan pembayaran langsung dari lapangan. Lihat aging
+            report real-time.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm">
+          <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Offline-First</h3>
+          <p class="text-gray-600">
+            Aplikasi Android bekerja tanpa sinyal. Data tersinkronisasi otomatis
+            saat online.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Siap Meningkatkan Efisiensi Tim Sales?</h2>
+      <p class="text-xl text-gray-600 mb-8">
+        Mulai gratis selama 14 hari. Tidak perlu kartu kredit.
+      </p>
+      <a
+        href="/demo"
+        class="inline-block px-8 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-medium"
+      >
+        Coba Sekarang
+      </a>
+    </div>
+  </section>
+</Layout>

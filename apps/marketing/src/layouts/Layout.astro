@@ -1,0 +1,78 @@
+---
+interface Props {
+  title: string
+  description?: string
+}
+
+const { title, description = 'Aplikasi sales canvassing dan penagihan untuk distributor Indonesia' } = Astro.props
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title} | Sales Canvassing</title>
+  </head>
+  <body class="min-h-screen bg-white text-gray-900">
+    <nav class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md border-b z-50">
+      <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+        <a href="/" class="text-xl font-bold text-primary-600">
+          SalesCanvassing
+        </a>
+        <div class="hidden md:flex items-center gap-6">
+          <a href="/pricing" class="text-gray-600 hover:text-gray-900">Harga</a>
+          <a href="/demo" class="text-gray-600 hover:text-gray-900">Demo</a>
+          <a
+            href="https://app.canvassing.id/login"
+            class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+          >
+            Masuk
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pt-16">
+      <slot />
+    </main>
+
+    <footer class="bg-gray-50 border-t py-12 mt-20">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="font-bold text-lg mb-4">SalesCanvassing</h3>
+            <p class="text-gray-600 text-sm">
+              Aplikasi field sales dan penagihan untuk distributor Indonesia.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">Produk</h4>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li><a href="/pricing">Harga</a></li>
+              <li><a href="/demo">Minta Demo</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">Legal</h4>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li><a href="/privacy">Kebijakan Privasi</a></li>
+              <li><a href="/terms">Syarat & Ketentuan</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">Kontak</h4>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li>info@canvassing.id</li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t mt-8 pt-8 text-center text-sm text-gray-500">
+          &copy; {new Date().getFullYear()} SalesCanvassing. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

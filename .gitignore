@@ -1,0 +1,25 @@
+# deps/build
+node_modules
+dist
+build
+.cache
+.server
+.wrangler
+
+# env/secrets
+.env*
+!.env.example
+
+# os/editor
+.DS_Store
+.vscode
+.idea
+*.code-workspace
+
+# test
+coverage
+
+# capacitor
+apps/web/android/.gradle
+apps/web/android/app/build
+apps/web/android/capacitor-cordova-android-plugins/build

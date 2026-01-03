@@ -1,0 +1,58 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "canvassing-web",
+  "main": "src/worker.ts",
+  "assets": {
+    "directory": "./dist/client",
+    "binding": "ASSETS"
+  },
+  "compatibility_date": "2024-11-20",
+  "compatibility_flags": ["nodejs_compat"],
+  "vars": {
+    "APP_ENV": "development",
+    "PUBLIC_MARKETING_URL": "https://canvassing-web.workers.dev",
+    "MONEY_DEFAULT_CURRENCY": "IDR"
+  },
+  "r2_buckets": [
+    {
+      "binding": "PHOTOS",
+      "bucket_name": "canvassing-photos"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  },
+  "env": {
+    "staging": {
+      "name": "canvassing-web-staging",
+      "vars": {
+        "APP_ENV": "staging",
+        "PUBLIC_MARKETING_URL": "https://canvassing-web-staging.workers.dev",
+        "MONEY_DEFAULT_CURRENCY": "IDR"
+      },
+      "r2_buckets": [
+        {
+          "binding": "PHOTOS",
+          "bucket_name": "canvassing-photos-staging"
+        }
+      ]
+    },
+    "production": {
+      "name": "canvassing-web",
+      "vars": {
+        "APP_ENV": "production",
+        "PUBLIC_MARKETING_URL": "https://canvassing.app",
+        "MONEY_DEFAULT_CURRENCY": "IDR"
+      },
+      "r2_buckets": [
+        {
+          "binding": "PHOTOS",
+          "bucket_name": "canvassing-photos"
+        }
+      ]
+    }
+  },
+  "dev": {
+    "port": 8788
+  }
+}
