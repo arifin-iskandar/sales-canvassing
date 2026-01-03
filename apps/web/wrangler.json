@@ -1,7 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "canvassing-web",
-  "main": "dist/server/index.js",
+  "main": "src/worker.ts",
   "assets": {
     "directory": "./dist/client",
     "binding": "ASSETS"

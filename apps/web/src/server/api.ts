@@ -3,6 +3,7 @@
  */
 import type { AppServerContext } from './env'
 import { handleAuthRequest } from './auth'
+import { handleChatApiRequest } from './chat'
 import { jsonResponse } from './http'
 
 export async function handleApiRequest(
@@ -102,6 +103,12 @@ async function handleTenantApiRequest(
   if (subPath.startsWith('media')) {
     // TODO: handleMediaApiRequest
     return jsonResponse(request, context.env, { ok: false, error: 'Not implemented' }, { status: 501 })
+  }
+
+  // AI Chat endpoints
+  if (subPath.startsWith('chat')) {
+    const chatSubPath = subPath.replace('chat', '')
+    return handleChatApiRequest(request, context, chatSubPath)
   }
 
   return jsonResponse(request, context.env, { ok: false, error: 'Not found' }, { status: 404 })
