@@ -74,11 +74,11 @@ export class Money {
   }
 
   isPositive() {
-    return this.amount.isPositive()
+    return this.amount.greaterThan(0)
   }
 
   isNegative() {
-    return this.amount.isNegative()
+    return this.amount.lessThan(0)
   }
 
   greaterThan(other: Money) {

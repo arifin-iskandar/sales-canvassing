@@ -1,6 +1,6 @@
 # Makefile for database migrations
 
-.PHONY: migrate migrate-down
+.PHONY: migrate migrate-down seed
 
 # Apply all migrations
 migrate:
